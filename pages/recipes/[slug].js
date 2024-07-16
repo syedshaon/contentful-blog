@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
@@ -32,7 +32,7 @@ export const getStaticProps = async ({ params }) => {
 
   return {
     props: { recipe: items[0] },
-    revalidate: 10,
+    revalidate: 1,
   };
 };
 
